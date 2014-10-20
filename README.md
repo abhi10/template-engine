@@ -9,5 +9,5 @@ valid HTML file which can be viewed in a browser.
 More details:
 
 > In this project I have implemented a template language and the corresponding template engine. The Template engine is a software component that combines one or more templates with a data model to output one or more result document.
--> The language that the templates are written in is known as template language.
--> Result documents can be any formatted output like web page or source code(in source code generator). 
+> The language that the templates are written in is known as template language.
+> Result documents can be any formatted output like web page or source code(in source code generator). 
