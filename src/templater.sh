@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
-python -B template_engine.py $1 $2 $3
+#the following arguments can also be read from command line
+a="template.panoramatemplate"
+b="data.json"
+c="output.html"
+python -B template_engine.py "$a" "$b" "$c"
 echo $'The Final Output :'
-cat $3
+cat $c
 echo $'\n'

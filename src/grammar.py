@@ -5,6 +5,7 @@ and provides accessor function to retrieve the rules from grammar
 in a convenient manner
 """
 import sys
+from tokens import token_map
 #-------------------------------------------------------------------------------
 # grammar table which contains a dictionary of key, value pairs where keys
 # are terminals and values are the rules associated with it.
@@ -26,27 +27,6 @@ grammar_table = {
 	   ['LOOP-START', 'para','LOOP-END'],
 	   ['LOOP-START', 'object', 'LOOP-END']]
 }
-#----------------------------------------------------------------------
-# Dictionary of key, value pairs for Tokens where key = html tag and 
-# values are the corresponding token tags
-# can generate a terminal table from this data
-#----------------------------------------------------------------------
-token_map = {
-    '<html>': 'HTML-START',
-    '</html>':'HTML-END',
-    '<head>':'HEAD-START',
-    '</head>':'HEAD-END',
-    '<title>':'TITLE-START',
-    '</title>':'TITLE-END',
-    '<body>':'BODY-START',
-    '</body>':'BODY-END',
-    '<h1>':'H1-START',
-    '</h1>':'H1-END',
-    '<p>':'PARA-START',
-    '</p>':'PARA-END',
-    'ENDEACH':'LOOP-END'
-}
-
 #---------  useful constants ---------------------------------------
 other_tokens =  ['LOOP-START','ITEM-TOKEN']# removed EMPTY tag
 loop_tag = 'LOOP-START'
