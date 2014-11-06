@@ -6,6 +6,13 @@ The input parameters being a custom template having html tags , JSON file which 
 On code execution the application outputs a
 valid HTML file which can be viewed in a browser.
 
+The Input files:
+data.json
+template.panoramatemplate
+
+Output File:
+output.html
+
 More details:
 
 In this project I have implemented a template language and the corresponding template engine. TheTemplate engine is a software component that combines one or more templates with a data model tooutput one or more result document.

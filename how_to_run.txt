@@ -1,9 +1,12 @@
 To uncompress the code:
 > tar -zxvf templater.tar.gz
+
 Once the template code is unzipped
 > cd template
+
 To run the code
-> ./templater.sh template.panoramatemplate data.json output.html
+> ./templater.sh 
+
 If on Ubuntu use any browser to open the output.html
 to view the final resultant
 > chromium-browser output.html
