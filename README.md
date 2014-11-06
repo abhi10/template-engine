@@ -19,3 +19,10 @@ In this project I have implemented a template language and the corresponding tem
 
 The language that the templates are written in is known as template language.
 Result documents can be any formatted output like web page or source code(in source code generator). 
+
+Run Instructions:
+```Shell
+    $ python -B template_engine.py template.sample data.json render.html
+    $ cat render.html
+    $ <browser> render.html
+```

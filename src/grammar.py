@@ -68,11 +68,11 @@ class GrammarEngine(object):
         return self.rule_keys
 
     def isTerminal(self, symbol):
-        """Returns a Boolean value if the given symbol argument is Terminal."""
+        """Returns True if input symbol is Terminal."""
         return symbol in self.terminalKeys()
 
     def isNonTerminal(self, symbol):
-        """Returns a Boolean value if the given symbol is a Non Terminal."""
+        """Returns True if input symbol is a Non Terminal."""
         return symbol in self.rule_keys
 
     
@@ -80,10 +80,8 @@ class GrammarEngine(object):
     # Compute the next grammar rule required by looking into future tokens
     #-------------------------------------------------------------------
     def grammarRule(self, rule_tag, token, token_lst):
-        """Function returns the rule associated with the rule tag
+        """Returns the rule associated with the rule tag
            by looking up rule_map dictionary.
-           If the rule tag is object or body-content then
-           appropriate rules are computed
         """
         if rule_tag == 'object':
             return self.objectRule(token, token_lst)
@@ -96,9 +94,7 @@ class GrammarEngine(object):
     # compute grammar rule for token type  'object' 
     #-------------------------------------------------------------------         
     def objectRule(self, token, token_lst):
-        """Function computes the object rule list based on information from token
-           which could be either an item token or a loop start token
-        """
+        """Returns the object rule list , else throws exception."""
         object_rules = self.rule_map['object']
         if self.isLoopToken(token):
             return self.loopStartRule(object_rules, token_lst)
@@ -147,9 +143,7 @@ class GrammarEngine(object):
     # compute grammar rule for token type 'body-content'
     #---------------------------------------------------------------
     def bodyRule(self, token, token_lst):
-        """Function computes the object rule list based on information from token
-           which could be either an item token or a loop start token
-        """
+        """Returns the object rule list for type body-content."""
         body_rules = self.rule_map['body-content']
         if self.isTokenHead(token):
             return body_rules[0] # head rule
@@ -179,9 +173,7 @@ class GrammarEngine(object):
 
     # given a token , outputs boolean value if token is Object type -ITEM or LOOP
     def isTokenObject(self, token):
-        """Function returns a boolean true or false
-           if given token is ITEM or LOOP
-        """
+        """Returns True if input token is of type ITEM or LOOP."""
         return  self.isItemToken(token) or self.isLoopToken(token)
 
     def isTokenPara(self, token):
