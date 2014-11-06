@@ -2,7 +2,6 @@ import sys
 import string
 from grammar import GrammarEngine
 
-#-------------------------------------------------------------------
 class Parser(object):
     """ Parser class in which the list of tokens is parsed 
         to compute the corresponding Abstract Syntax Tree
@@ -51,5 +50,5 @@ class Parser(object):
             return (grammar.getTerminalToken(sym, rest_tokens[0]), 'token')
         else:
             return (None, 'error')
-#-------------------------------------------------------------------
+
 

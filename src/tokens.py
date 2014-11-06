@@ -91,6 +91,7 @@ class Token(object):
             return re.compile(pattern).search(input_str).group(1)
 
     def inverseMap(self):
+        """Returns a reverse hash map of the Token map """
         inv_map = {v: k for k,v in self.token_map.items()}
         return inv_map
 

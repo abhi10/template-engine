@@ -38,7 +38,11 @@ para_tag = 'PARA-START'
 # Create a Grammar Class
 #----------------------------------------------------------------------
 class GrammarEngine(object):
-    
+    """GrammarEngine class keeps track of the grammar table, the token hash map,
+       and variables to access the grammar and taken values.
+       The GrammarEngine class is used to determine if an input symbol is terminal 
+       or token and also determine the corresponding grammar rule based on type of
+       argument (object, Item Token , Para, Body etc.) """
     def __init__(self):
         self.rule_map = grammar_table
         self.token_map = token_map
@@ -46,23 +50,29 @@ class GrammarEngine(object):
         self.terminal_keys = self.token_map.values()
 
     def rules(self):
+        """Returns the hash map of Rules."""
         return self.rule_map
 
     def tokenMap(self):
+        """Returs the hash map of Token."""
         return self.token_map
 
     def terminalKeys(self):
+        """Returns a list of terminal keys."""
         terminal_keys = self.terminal_keys
         terminal_keys = terminal_keys + other_tokens
         return terminal_keys
         
     def nonTerminalKeys(self):
+        """Returns a list of Grammar Keys."""
         return self.rule_keys
 
     def isTerminal(self, symbol):
+        """Returns a Boolean value if the given symbol argument is Terminal."""
         return symbol in self.terminalKeys()
 
     def isNonTerminal(self, symbol):
+        """Returns a Boolean value if the given symbol is a Non Terminal."""
         return symbol in self.rule_keys
 
     
@@ -100,7 +110,7 @@ class GrammarEngine(object):
     #--------------------------------------------------------------------
     # compute grammar rule for ITEM-TOKEN within Object Type
     # two cases :
-    # current token is ITEM-TOKEN 
+    # current token is ITEM-TOKEN or Loop-TOKEN
     #--------------------------------------------------------------------
     def isItemToken(self, token):
         return (item_tag in token)
