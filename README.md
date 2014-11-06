@@ -29,6 +29,7 @@ Result documents can be any formatted output like web page or source code(in sou
     		    [ para ] [ body-content ]|
                     [ object ] [ body-content ]|
                     []
+
     h1            = [ H1-START ] [ object ] [ H1-END ]
     para          = [ PARA-START ] [ object ] [ PARA-END ]
 
