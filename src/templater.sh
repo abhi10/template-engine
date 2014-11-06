@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 #the following arguments can also be read from command line
-a="template.panoramatemplate"
+a="template.sample"
 b="data.json"
-c="output.html"
+c="render.html"
 python -B template_engine.py "$a" "$b" "$c"
 echo $'The Final Output :'
 cat $c

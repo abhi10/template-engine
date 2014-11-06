@@ -8,10 +8,10 @@ valid HTML file which can be viewed in a browser.
 
 The Input files:
 data.json
-template.panoramatemplate
+template.sample
 
 Output File:
-output.html
+render.html
 
 More details:
 
