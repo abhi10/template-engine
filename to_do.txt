@@ -1,0 +1,12 @@
+To-Do list:
+
+Need to add more appropriate comments, atleast one liner comment
+for each function.
+
+Testing:
+use Pytest to write unit tests where applicable and also integration 
+tests , build a test suite.
+
+Continous Integration:
+Set Up Jenkins for Continous Integration , not much dev work but useful 
+to learn about automated testing.
