@@ -19,23 +19,23 @@ Result documents can be any formatted output like web page or source code(in sou
 
 ### LL Grammar for the Template Engine:
 
-    html: [ HTML-START ] [ html-content] [ HTML-END ]	
-    html-content : [ html-head ] [ html-body] 
-    html-head:  [ HEAD-START ] [ head-content ] [ HEAD-END ]
-    head-content: [ TITLE-START ] [ object ] [ TITLE-END ]
-    html-body: [ BODY-START ] [ body-content ] [ BODY-END ]
+    html          = [ HTML-START ] [ html-content] [ HTML-END ]	
+    html-content  = [ html-head ] [ html-body] 
+    html-head     = [ HEAD-START ] [ head-content ] [ HEAD-END ]
+    head-content  = [ TITLE-START ] [ object ] [ TITLE-END ]
+    html-body     = [ BODY-START ] [ body-content ] [ BODY-END ]
 
-    body-content: [ h1 ] [ body-content ] |
-    		  [ para ] | [ body-content ] |
-                  [ object ] [ body-content ] |
-                  [ ]
-    h1: [ H1-START ] [ object ] [ H1-END ]
-    para: [ PARA-START ] [ object ] [ PARA-END ]
+    body-content  = [ h1 ] [ body-content ]|
+    		    [ para ] | [ body-content ]|
+                    [ object ] [ body-content ]|
+                    []
+    h1            = [ H1-START ] [ object ] [ H1-END ]
+    para          = [ PARA-START ] [ object ] [ PARA-END ]
 
-    object: [ ITEM-TOKEN ] |
-            [ ITEM-TOKEN ] [ object ] |
-            [ LOOP-START ] [ para ] [ LOOP-END ] |
-            [ LOOP-START ] [ object ] [ LOOP-END]
+    object        = [ ITEM-TOKEN ]|
+                    [ ITEM-TOKEN ] [ object ]|
+                    [ LOOP-START ] [ para ] [ LOOP-END ]|
+                    [ LOOP-START ] [ object ] [ LOOP-END]
 
 
 ## Run Instructions:
