@@ -1,11 +1,17 @@
-To uncompress the code:
-> tar -zxvf templater.tar.gz
+To run the code:
+> git clone https://github.com/abhi10/template-engine
 
-Once the template code is unzipped
-> cd template
+> cd src
 
 To run the code
 > ./templater.sh 
+#Note: the input arguments to be passed to the template_engine file are hard coded in the shell script
+
+This code runs on Mac.
+
+If the Shell script does not run then use the following command
+due to the different OS version.
+> python -B template_engine.py template.panoramatemplate data.json output.html
 
 If on Ubuntu use any browser to open the output.html
 to view the final resultant
