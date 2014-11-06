@@ -26,7 +26,7 @@ Result documents can be any formatted output like web page or source code(in sou
     html-body     = [ BODY-START ] [ body-content ] [ BODY-END ]
 
     body-content  = [ h1 ] [ body-content ]|
-    		    [ para ] | [ body-content ]|
+    		    [ para ] [ body-content ]|
                     [ object ] [ body-content ]|
                     []
     h1            = [ H1-START ] [ object ] [ H1-END ]
