@@ -13,9 +13,9 @@ Result documents can be any formatted output like web page or source code(in sou
 * The Mini Template Engine is broken into 5 main parts.
 * Tokens
 * Lexer
-* Parser
 * Grammar
-* Template Engine
+* Parser
+* Template Engine: Converts AST to HTML
 
 ### LL Grammar for the Template Engine:
 
